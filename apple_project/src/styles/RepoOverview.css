@@ -1,0 +1,251 @@
+.repo-overview-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.repo-overview-header {
+  display: flex;
+  gap: 16px;
+}
+
+.back-button {
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+  padding: 10px 16px;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--gray-300);
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: var(--gray-200);
+  border-color: var(--gray-400);
+}
+
+.repo-overview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.repo-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.repo-title-section h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.repo-overview-desc {
+  font-size: 16px;
+  color: var(--gray-600);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.repo-meta-bar {
+  display: flex;
+  gap: 24px;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--gray-700);
+}
+
+.repo-meta-bar span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.repo-meta-bar strong {
+  color: var(--gray-900);
+  font-weight: 600;
+}
+
+.insights-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.insights-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.insight-card {
+  background-color: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.insight-label {
+  font-size: 12px;
+  color: var(--gray-600);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.insight-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.activity-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+}
+
+.activity-list li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+.activity-list li:not(:last-child) {
+  border-bottom: 1px solid var(--gray-100);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.task-selection-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-selection-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0;
+}
+
+.task-selection-card {
+  background-color: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-selection-card label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-900);
+  display: block;
+}
+
+.task-select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  background-color: white;
+  color: var(--gray-900);
+  cursor: pointer;
+}
+
+.task-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.task-description {
+  padding: 12px 16px;
+  background-color: var(--gray-50);
+  border-left: 4px solid var(--primary);
+  border-radius: 4px;
+}
+
+.task-description p {
+  font-size: 14px;
+  color: var(--gray-700);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.run-task-button {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.run-task-button:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+.run-task-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .repo-title-section h1 {
+    font-size: 24px;
+  }
+
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .repo-meta-bar {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
